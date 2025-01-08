@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Post
 
 # Create your views here.
 def posts_list(request):
-    return render(request, 'posts/posts_list.html') # link that shit
+    posts = Post.objects.all().order_by('-date') # chron order
+    return render(request, 'posts/posts_list.html', { 'posts': posts }) # link that shit
