@@ -19,7 +19,8 @@
         <a href='/' title="Home">Home</a> | 
         <a href='/about' title="About">About</a> | 
         <a href='{% url "posts:list" %}'>News</a> |
-        <a href='{% url "users:register" %}'>New User</a> 
+        <a href='{% url "users:register" %}'>New User</a> |
+        <a href='{% url "users:login" %}'>Login</a> 
     </nav>
     <main>
         {% block content %}
